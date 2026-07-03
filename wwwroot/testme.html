@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestMe - Internet Project Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="shared-header"></div>
+
+    <main>
+        <section>
+            <h2>TestMe Survey</h2>
+            <form id="nerd-survey-form" method="post" action="/api/add_nerd">
+                <fieldset>
+                    <legend>Question 1</legend>
+                    <label><input type="radio" name="question1" value="1" checked> First answer</label><br>
+                    <label><input type="radio" name="question1" value="2"> Second answer</label><br>
+                    <label><input type="radio" name="question1" value="3"> Third answer</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 2</legend>
+                    <label><input type="radio" name="question2" value="1" checked> First answer</label><br>
+                    <label><input type="radio" name="question2" value="2"> Second answer</label><br>
+                    <label><input type="radio" name="question2" value="3"> Third answer</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 3</legend>
+                    <label><input type="radio" name="question3" value="1" checked> First answer</label><br>
+                    <label><input type="radio" name="question3" value="2"> Second answer</label><br>
+                    <label><input type="radio" name="question3" value="3"> Third answer</label>
+                </fieldset>
+
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input id="name" name="name" type="text" required style="width: 100%;">
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS, JavaScript, and C# .NET Minimal API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
