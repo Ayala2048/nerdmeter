@@ -4,14 +4,15 @@ var greetingHint = 'This text is stored in a variable in Program.cs and got here
 
 document.addEventListener('DOMContentLoaded', async function () {
     await loadSharedHeader();
-    showCurrentDate();
-    loadServerTime();
-    showDaysLeft();
-    setActiveNavLink();
-    loadGreetingMessage();
-    loadMessages();
+    // showCurrentDate();
+    // loadServerTime();
+    // showDaysLeft();
+    // setActiveNavLink();
+    // loadGreetingMessage();
+    // loadMessages();
+    loadScore();
     loadNerdBoard();
-    addHoverTooltips();
+    // addHoverTooltips();
 });
 
 
@@ -33,7 +34,7 @@ function loadSharedHeader() {
         });
 }
 
-function showCurrentDate() {
+/*function showCurrentDate() {
     const dateElement = document.getElementById('current-date');
 
     if (!dateElement) {
@@ -117,7 +118,7 @@ function loadGreetingMessage() {
         .catch(function () {
             greetingTarget.textContent = 'Could not load greeting';
         });
-}
+}*/
 
 function loadNerdBoard() {
     const nerdBoard = document.getElementById('nerd-board');
@@ -138,8 +139,24 @@ function loadNerdBoard() {
             nerdBoard.value = 'Could not load nerd board';
         });
 }
+function loadScore() {
+    const scoreElement = document.getElementById('score');
 
-function addHoverTooltips() {
+    if (!scoreElement) {
+        return;
+    }
+    fetch('/api/score')
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (text) {
+            scoreElement.textContent = text;
+        })
+        .catch(function () {
+            scoreElement.textContent = 'Could not load score';
+        });
+}
+/*function addHoverTooltips() {
     var currentPage = window.location.pathname.split('/').pop() || 'examples.html';
     console.log(currentPage);
     if (currentPage !== 'examples.html') {
@@ -167,9 +184,9 @@ function addHoverTooltips() {
     document.getElementById('greeting-row').addEventListener('mouseleave', function () {
         document.getElementById('greeting-hover').textContent = '';
     });
-}
+}*/
 
-function loadMessages() {
+/*function loadMessages() {
     const messageBoard = document.getElementById('message-board');
 
     if (!messageBoard) {
@@ -187,4 +204,4 @@ function loadMessages() {
         .catch(function () {
             messageBoard.value = 'Could not load messages';
         });
-}
+}*/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NerdBoard - Internet Project Guide</title>
+    <title>Leaderboard - NerdMeter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,15 +11,27 @@
 
     <main>
         <section>
-            <h2>Nerd Board</h2>
-            <p>This page shows the nerd board data loaded from the server.</p>
+            <h2>Leaderboard</h2>
+            <p>Check out where you rank among the other participants.</p>
+            
+            <div style="background: linear-gradient(135deg, #f0f8f7 0%, #e8f7f5 100%); border-radius: 8px; padding: 24px; margin: 24px 0; text-align: center;">
+                <p style="color: #555; font-size: 0.95rem; margin-bottom: 8px;">The Latest Score:</p>
+                <p style="color: #f97316;  font-size: 3.0rem; font-weight: 800; margin: 0;"><span id="score">—</span><span style="font-size: 1.8rem;">%</span></p>
+            </div>
 
-            <textarea id="nerd-board" rows="10" style="width: 100%; overflow-y: scroll;" readonly>Loading nerd board...</textarea>
+            <div style="margin-top: 32px;">
+                <h3 style="margin-bottom: 16px;">The Board:</h3>
+                <textarea id="nerd-board" readonly style="font-size: 0.95rem; color: #2c3e50;">Loading rankings...</textarea>
+            </div>
+
+            <p style="margin-top: 20px;">Here is a follow-up questionnaire to find out what kind of nerd you are:</p>
+            <p><a href="https://afaik.io/nerd_test" target="_blank" rel="noopener noreferrer">https://afaik.io/nerd_test</a></p>
+            
         </section>
     </main>
 
     <footer>
-        <p>Built with HTML, CSS, JavaScript, and C# .NET Minimal API.</p>
+        <p>i like my nerds in a pita</p>
     </footer>
 
     <script src="script.js"></script>

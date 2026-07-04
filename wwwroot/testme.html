@@ -7,32 +7,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     
     <div id="shared-header"></div>
 
     <main>
         <section>
-            <h2>TestMe Survey</h2>
+        <h2>The NerdMeter Test</h2>
+            <p style="margin-bottom: 24px; color: #b0b0b0;">Answer these questions honestly to calculate your nerd score. Choose the option that best represents you.</p>
             <form id="nerd-survey-form" method="post" action="/api/add_nerd">
                 <fieldset>
-                    <legend>Question 1</legend>
-                    <label><input type="radio" name="question1" value="1" checked> First answer</label><br>
-                    <label><input type="radio" name="question1" value="2"> Second answer</label><br>
-                    <label><input type="radio" name="question1" value="3"> Third answer</label>
+                    <h3 class="question-heading">Do you have an intellectual interest? (Yes or No) </h3>
+                    <label><input type="radio" name="question1" value="1" checked> Yes</label><br>
+                    <label><input type="radio" name="question1" value="2"> No</label><br>
+                    <label><input type="radio" name="question1" value="3"> Of course!</label>
+                    <label><input type="radio" name="question1" value="4"> Actually… "Yes or No" is objectively incorrect because there are more than two answers. And even if it was a “Yes or No” there is no need to write it in the caption.</label>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Question 2</legend>
-                    <label><input type="radio" name="question2" value="1" checked> First answer</label><br>
-                    <label><input type="radio" name="question2" value="2"> Second answer</label><br>
-                    <label><input type="radio" name="question2" value="3"> Third answer</label>
+                    <h3 class="question-heading">Which do you prefer:</h3>
+                    <label><input type="radio" name="question2" value="1" checked> Dogs or cats?</label><br>
+                    <label><input type="radio" name="question2" value="2"> I'm noticing a recurring pattern of terrible jokes and general stupidity.</label><br>
+                    <label><input type="radio" name="question2" value="3"> Parrots.</label>
+                    <label><input type="radio" name="question2" value="4"> I'd prefer you stopped being self-aware. It's getting cheap.</label>
+                    <p>I wanted to delete that last option because it personally attacked this website.
+                    <br>Unfortunately it's also correct...</p>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Question 3</legend>
-                    <label><input type="radio" name="question3" value="1" checked> First answer</label><br>
-                    <label><input type="radio" name="question3" value="2"> Second answer</label><br>
-                    <label><input type="radio" name="question3" value="3"> Third answer</label>
+                    <h3 class="question-heading">If you could buy a one-way time travel ticket, where would you go?</h3>
+                    <label><input type="radio" name="question3" value="1" checked> The past.</label><br>
+                    <label><input type="radio" name="question3" value="2"> The future.</label><br>
+                    <label><input type="radio" name="question3" value="3"> Stay here.</label>
+                    <label><input type="radio" name="question3" value="4"> Time travel isn't a consistent concept. Please specify the mechanics before asking. </label>
+                </fieldset>
+
+                <fieldset>
+                    <h3 class="question-heading">Do you wear glasses?</h3>
+                    <label><input type="radio" name="question4" value="1" checked> Yes</label><br>
+                    <label><input type="radio" name="question4" value="2"> No</label><br>
+                    <label><input type="radio" name="question4" value="3"> Yes, rectangular ones - I like to slide them up my nose when I'm sharing scientific facts.</label>
+                    <label><input type="radio" name="question4" value="4"> That's not how nerds are in reality. You've probably watched too many American high school TV shows. </label>
+                </fieldset>
+
+                <fieldset>
+                    <h3 class="question-heading">If you're involved in a fight, which side are you on? </h3>
+                    <label><input type="radio" name="question5" value="1" checked> The beating\beating back side. </label><br>
+                    <label><input type="radio" name="question5" value="2"> The beaten side.</label><br>
+                    <label><input type="radio" name="question5" value="3"> the running away\avoiding side.</label>
+                    <label><input type="radio" name="question5" value="4"> The left side. </label>
+                </fieldset>
+
+                <fieldset>
+                    <h3 class="question-heading">Have you looked at my HTML?</h3>
+                    <label><input type="radio" name="question6" value="1" checked> No</label><br>
+                    <label><input type="radio" name="question6" value="2"> Yes</label><br>
+                    <label><input type="radio" name="question6" value="3"> what is "HTML"?</label>
+                    <label><input type="radio" name="question6" value="4"> Yes, and it looks like AI.</label>
+                    <p>Please don't look at my code. That is very intrusive of you.
+                    <br> And for who that pick the last option : You're looking like AI!</p>
                 </fieldset>
 
                 <p>
@@ -48,7 +81,7 @@
     </main>
 
     <footer>
-        <p>Built with HTML, CSS, JavaScript, and C# .NET Minimal API.</p>
+        <p>i like my nerds in a pita.</p>
     </footer>
 
     <script src="script.js"></script>
