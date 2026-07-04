@@ -4,8 +4,6 @@ WebApplication app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-string greetingMessage = "Welcome to the Internet Project Guide";
-string allMessages = "Hello from the server";
 int userScore = 0;
 Nerd[] allNerds = new Nerd[]
 {
@@ -13,35 +11,13 @@ Nerd[] allNerds = new Nerd[]
     new Nerd("HaAars", 0),
 };
 
-//app.MapGet("/api/greeting", GetGreeting);
-//app.MapGet("/api/message", GetMessage);
 app.MapGet("/api/nerds", GetNerds);
-app.MapGet("/api/score", GetTopScore);
-//app.MapGet("/api/current-time", GetCurrentTime);
+app.MapGet("/api/score", GetLastScore);
 app.MapPost("/api/add_nerd", AddNerd);
 app.MapPost("/api/score", PostScore);
 
 app.Run();
 
-/* IResult GetGreeting()
-{
-	return Results.Text(greetingMessage);
-}
-
-IResult GetMessage()
-{
-	return Results.Text(allMessages);
-}
-
-IResult UpdateMessage(HttpRequest request)
-{
-	string message = request.Form["message"].ToString();
-	if (!string.IsNullOrEmpty(message))
-	{
-		string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-		allMessages += $"\n[{timestamp}] {message}";
-	}
-	return Results.Redirect("/examples.html");}*/
 
 IResult GetNerds()
 {
@@ -55,7 +31,7 @@ IResult GetNerds()
 	return Results.Text(output);
 }
 
-IResult GetTopScore()
+IResult GetLastScore()
 {
 	return Results.Text(userScore.ToString());
 }
@@ -217,12 +193,7 @@ int GetQuestion6Score(string answer)
 	return 9;
 }
 
-/*IResult GetCurrentTime()
-{
-	var now = DateTime.Now;
-	var formatted = now.ToString("dd/MM/yyyy HH:mm:ss");
-	return Results.Text(formatted);
-}*/
+
 
 class Nerd
 {
